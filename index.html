@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensamento Político: 80 Citações</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            color: #1e293b;
+        }
+        .quote-serif {
+            font-family: 'Merriweather', serif;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .progress-bar {
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 sm:p-8">
+
+<div class="max-w-2xl w-full bg-white/90 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden border border-white relative">
+    <!-- 顶部进度条 -->
+    <div class="absolute top-0 left-0 w-full h-1.5 bg-slate-100">
+        <div id="progress" class="progress-bar h-full bg-indigo-600 w-0"></div>
+    </div>
+
+    <!-- Header -->
+    <div class="px-10 pt-10 pb-6 flex justify-between items-baseline">
+        <div>
+            <h1 class="text-slate-900 font-extrabold text-xl tracking-tight">Pensamento Político</h1>
+            <p class="text-slate-400 text-[10px] uppercase tracking-[0.2em] font-bold mt-1">Trilíngue • Filosofia</p>
+        </div>
+        <div class="flex items-center gap-2">
+            <button onclick="shuffleQuotes()" class="p-1.5 bg-indigo-50 text-indigo-600 rounded-full hover:bg-indigo-100 transition-colors" title="Ordem Aleatória (乱序)">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+            </button>
+            <div class="bg-indigo-50 text-indigo-600 px-4 py-1.5 rounded-2xl text-xs font-bold font-mono border border-indigo-100" id="counter">01 / 80</div>
+        </div>
+    </div>
+
+    <!-- Content Area -->
+    <div id="content-area" class="px-10 pb-10 min-h-[580px] flex flex-col">
+        <div class="flex-grow space-y-10 fade-in">
+            <!-- Author Tag & Star -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="h-[2px] w-10 bg-indigo-600"></div>
+                    <span id="author" class="text-indigo-600 font-black uppercase text-xs tracking-widest"></span>
+                </div>
+                <button onclick="toggleFavorite()" class="text-slate-300 hover:text-yellow-400 transition-colors focus:outline-none group" title="Salvar / Favoritar (收藏)">
+                    <svg id="star-icon" class="w-7 h-7 transition-all duration-300 group-active:scale-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Quotes Content -->
+            <div class="space-y-8">
+                <!-- Portuguese -->
+                <div class="relative">
+                    <svg class="absolute -top-4 -left-6 w-8 h-8 text-indigo-100" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 7.55228 14.017 7V5C14.017 4.44772 14.4647 4 15.017 4H19.017C21.2261 4 23.017 5.79086 23.017 8V15C23.017 18.866 19.883 22 16.017 22H14.017V21ZM1.017 21L1.017 18C1.017 16.8954 1.91243 16 3.017 16H6.017C6.56928 16 7.017 15.5523 7.017 15V9C7.017 8.44772 6.56928 8 6.017 8H2.017C1.46472 8 1.017 7.55228 1.017 7V5C1.017 4.44772 1.46472 4 2.017 4H6.017C8.22614 4 10.017 5.79086 10.017 8V15C10.017 18.866 6.883 22 3.017 22H1.017V21Z"/></svg>
+                    <p id="quote-pt" class="quote-serif text-2xl md:text-3xl text-slate-800 leading-[1.4] font-bold italic relative z-10"></p>
+                </div>
+                
+                <!-- English -->
+                <p id="quote-en" class="text-slate-400 text-lg font-medium italic border-l-2 border-slate-100 pl-5"></p>
+                
+                <!-- Chinese -->
+                <p id="quote-zh" class="text-slate-700 text-xl font-bold leading-relaxed tracking-wide"></p>
+            </div>
+
+            <!-- Notes Section -->
+            <div class="glass rounded-[1.5rem] p-6 shadow-sm">
+                <div class="flex items-center gap-2 mb-3 text-indigo-700 font-extrabold text-[10px] uppercase tracking-wider">
+                    <div class="p-1.5 bg-indigo-100 rounded-lg">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-width="2.5"></path></svg>
+                    </div>
+                    Notas de Português
+                </div>
+                <p id="note" class="text-slate-600 text-sm leading-relaxed"></p>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex gap-4 mt-8">
+            <button onclick="prev()" class="flex-1 bg-slate-50 hover:bg-slate-100 text-slate-800 py-5 rounded-3xl font-bold transition-all flex items-center justify-center gap-2 border border-slate-200/50">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                Anterior
+            </button>
+            <button onclick="next()" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white py-5 rounded-3xl font-bold transition-all shadow-[0_10px_30px_rgba(79,70,229,0.3)] flex items-center justify-center gap-2">
+                Próximo
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const quotes = [
+        // 1-50 原来的名言
+        {
+            author: "Sócrates",
+            pt: "Uma vida não examinada não vale a pena ser vivida.",
+            en: "An unexamined life is not worth living.",
+            zh: "未经审视的生活不值得过。",
+            note: "<b>Vale a pena</b>: 这是一个极常用的短语，表示“值得”。<b>Examinada</b>: 动词 examinar 的过去分词，表示被动关系。"
+        },
+        {
+            author: "Aristóteles",
+            pt: "O homem é, por natureza, um animal político.",
+            en: "Man is by nature a political animal.",
+            zh: "人类天生是政治动物。",
+            note: "<b>Por natureza</b>: 意为“天生地”。注意 <b>político</b> 作为形容词修饰 animal。"
+        },
+        {
+            author: "Platão",
+            pt: "Onde o povo é o mestre, os governantes são os servos.",
+            en: "Where the people are the masters, the rulers are the servants.",
+            zh: "人民做主的地方，统治者就是仆人。",
+            note: "<b>Mestre</b>: 主人。<b>Servos</b>: 仆人/奴仆。注意复数形式的词尾变化。"
+        },
+        {
+            author: "Nicolau Maquiavel",
+            pt: "É muito mais seguro ser temido do que amado.",
+            en: "It is much safer to be feared than loved.",
+            zh: "让人畏惧比让人爱戴要安全得多。",
+            note: "<b>Temido/Amado</b>: 过去分词做形容词。<b>Do que</b>: 比较级连接词，表示“比”。"
+        },
+        {
+            author: "John Locke",
+            pt: "Onde não há lei, não há liberdade.",
+            en: "Where there is no law, there is no freedom.",
+            zh: "法律缺失的地方，就没有自由。",
+            note: "<b>Há</b>: 动词 haver 的变位，表示“存在（there is/are）”。"
+        },
+        {
+            author: "Thomas Hobbes",
+            pt: "A vida é solitária, pobre, sórdida, embrutecida e curta.",
+            en: "Life is solitary, poor, nasty, brutish, and short.",
+            zh: "生命是孤独、贫困、卑污、野蛮而短暂的。",
+            note: "<b>Embrutecida</b>: 野蛮化的。注意这一连串形容词的阴性形式（以 -a 结尾）。"
+        },
+        {
+            author: "Montesquieu",
+            pt: "Para que não se possa abusar do poder, é preciso que o poder trave o poder.",
+            en: "To prevent the abuse of power, it is necessary that power should be a check to power.",
+            zh: "为了不滥用权力，必须以权力约束权力。",
+            note: "<b>Trave</b>: 动词 travar 的虚拟式，表示一种必要的约束。"
+        },
+        {
+            author: "Jean-Jacques Rousseau",
+            pt: "O homem nasce livre, e por toda parte encontra-se a ferros.",
+            en: "Man is born free, and everywhere he is in chains.",
+            zh: "人生而自由，但却无往不在枷锁之中。",
+            note: "<b>Nasce</b>: 动词 nascer。<b>A ferros</b>: 字面意思“带着铁链”，指代束缚。"
+        },
+        {
+            author: "Adam Smith",
+            pt: "Não é da benevolência do açougueiro que esperamos nosso jantar.",
+            en: "It is not from the benevolence of the butcher that we expect our dinner.",
+            zh: "我们的晚餐并非来自屠夫的仁慈。",
+            note: "<b>Açougueiro</b>: 屠夫。<b>Benevolência</b>: 仁慈/善心。"
+        },
+        {
+            author: "Benjamin Franklin",
+            pt: "Aqueles que renunciam à liberdade por segurança, não merecem nenhuma.",
+            en: "Those who give up liberty for safety deserve neither.",
+            zh: "为了安全而放弃自由的人，两者都不配享有。",
+            note: "<b>Merecem</b>: 动词 merecer (值得/配得上)。<b>Renunciar a</b>: 放弃。"
+        },
+        {
+            author: "Thomas Jefferson",
+            pt: "O preço da liberdade é a eterna vigilância.",
+            en: "The price of liberty is eternal vigilance.",
+            zh: "自由的代价是永恒的警觉。",
+            note: "<b>Vigilância</b>: 警觉/监视。<b>Preço</b>: 价格/代价。"
+        },
+        {
+            author: "Alexis de Tocqueville",
+            pt: "A história é uma galeria onde há poucos originais e muitas cópias.",
+            en: "History is a gallery in which there are few originals and many copies.",
+            zh: "历史是一座画廊，原作寥寥，复制品无数。",
+            note: "<b>Uma galeria</b>: Galeria 是阴性名词，故使用不定冠词 uma。<b>Poucos/Muitas</b>: 需数格一致。"
+        },
+        {
+            author: "John Stuart Mill",
+            pt: "Sobre seu próprio corpo e mente, o indivíduo é soberano.",
+            en: "Over his own body and mind, the individual is sovereign.",
+            zh: "对于他自己的身心，个人即是主权者。",
+            note: "<b>Soberano</b>: 主权者。<b>Próprio</b>: 自己的。"
+        },
+        {
+            author: "James Madison",
+            pt: "Se os homens fossem anjos, nenhum governo seria necessário.",
+            en: "If men were angels, no government would be necessary.",
+            zh: "如果人人都是天使，就不需要政府了。",
+            note: "<b>Fossem</b>: 动词 ser 的虚拟式未完成时，表示虚拟假设。"
+        },
+        {
+            author: "Alexander Hamilton",
+            pt: "Uma nação sem um governo nacional é uma visão terrível.",
+            en: "A nation without a national government is an awful spectacle.",
+            zh: "一个没有全国政府的国家是一个可怕的景象。",
+            note: "<b>Nação</b>: 国家。<b>Terrível</b>: 可怕的。"
+        },
+        {
+            author: "Thomas Paine",
+            pt: "O governo, mesmo em seu melhor estado, é apenas um mal necessário.",
+            en: "Government, even in its best state, is but a necessary evil.",
+            zh: "政府即使在最好的状态下，也不过是必要的恶。",
+            note: "<b>Apenas</b>: 仅仅/只不过。<b>Mal</b>: 恶/坏事。"
+        },
+        {
+            author: "Abraham Lincoln",
+            pt: "Um governo do povo, pelo povo e para o povo.",
+            en: "Government of the people, by the people, for the people.",
+            zh: "民有、民治、民享的政府。",
+            note: "<b>Pelo/Para</b>: 分别表示行为主体和目的。"
+        },
+        {
+            author: "Karl Marx",
+            pt: "Os filósofos apenas interpretaram o mundo; o ponto é mudá-lo.",
+            en: "Philosophers have only interpreted the world; the point is to change it.",
+            zh: "哲学家们只是解释了世界，问题在于改变世界。",
+            note: "<b>Mudá-lo</b>: 动词 mudar + 代词 lo (指代 mundo)。"
+        },
+        {
+            author: "Friedrich Nietzsche",
+            pt: "O Estado é o mais frio de todos os monstros frios.",
+            en: "The state is the coldest of all cold monsters.",
+            zh: "国家是一切冷酷怪物中最冷酷的一个。",
+            note: "<b>Monstros</b>: 怪物。<b>Frio</b>: 寒冷/冷酷。"
+        },
+        {
+            author: "Max Weber",
+            pt: "O Estado é o monopólio da violência legítima.",
+            en: "The State is the monopoly of the legitimate use of physical force.",
+            zh: "国家是对合法暴力的垄断。",
+            note: "<b>Legítima</b>: 合法的。<b>Monopólio</b>: 垄断。"
+        },
+        {
+            author: "Hannah Arendt",
+            pt: "A essência da política é a liberdade.",
+            en: "The essence of politics is freedom.",
+            zh: "政治的本质是自由。",
+            note: "<b>Essência</b>: 本质。<b>Política</b>: 政治。"
+        },
+        {
+            author: "John Rawls",
+            pt: "A justiça é a primeira virtude das instituições sociais.",
+            en: "Justice is the first virtue of social institutions.",
+            zh: "正义是社会制度的首要价值。",
+            note: "<b>Virtude</b>: 美德/价值。"
+        },
+        {
+            author: "Friedrich Hayek",
+            pt: "A liberdade de escolher é essencial para a dignidade humana.",
+            en: "The liberty of choice is essential to human dignity.",
+            zh: "选择的自由对人类尊严至关重要。",
+            note: "<b>Escolher</b>: 选择。<b>Dignidade</b>: 尊严。"
+        },
+        {
+            author: "Karl Popper",
+            pt: "Temos que planejar a liberdade, e não apenas a segurança.",
+            en: "We must plan for freedom, and not only for security.",
+            zh: "我们必须规划自由，而不仅仅是安全。",
+            note: "<b>Planejar</b>: 计划/规划。"
+        },
+        {
+            author: "George Orwell",
+            pt: "Quem controla o passado controla o futuro.",
+            en: "Who controls the past controls the future.",
+            zh: "谁控制了过去，谁就控制了未来。",
+            note: "<b>Passado/Futuro</b>: 过去与未来。"
+        },
+        {
+            author: "Martin Luther King Jr.",
+            pt: "A injustiça em qualquer lugar é uma ameaça à justiça em todo lugar.",
+            en: "Injustice anywhere is a threat to justice everywhere.",
+            zh: "任何地方的不公正都是对所有地方公正的威胁。",
+            note: "<b>Ameaça</b>: 威胁。<b>Qualquer</b>: 任何。"
+        },
+        {
+            author: "Mahatma Gandhi",
+            pt: "Seja a mudança que você deseja ver no mundo.",
+            en: "Be the change you wish to see in the world.",
+            zh: "欲变世界，先变自身。",
+            note: "<b>Seja</b>: 动词 ser 的命令式。"
+        },
+        {
+            author: "Nelson Mandela",
+            pt: "A educação é a arma mais poderosa para mudar o mundo.",
+            en: "Education is the most powerful weapon to change the world.",
+            zh: "教育是改变世界最强大的武器。",
+            note: "<b>Arma</b>: 武器。<b>Poderosa</b>: 强大的。"
+        },
+        {
+            author: "Winston Churchill",
+            pt: "A democracia é a pior forma de governo, exceto todas as outras.",
+            en: "Democracy is the worst form of government, except for all those other forms.",
+            zh: "民主是最坏的政府形式，除了所有其他的以外。",
+            note: "<b>Pior</b>: 最差的（bad的最高级）。"
+        },
+        {
+            author: "Mary Wollstonecraft",
+            pt: "Eu não desejo que as mulheres tenham poder sobre os homens, mas sobre si mesmas.",
+            en: "I do not wish women to have power over men, but over themselves.",
+            zh: "我不希望女性拥有支配男性的权力，而是支配她们自己的权力。",
+            note: "<b>Si mesmas</b>: 她们自己（反身）。"
+        },
+        {
+            author: "Isaiah Berlin",
+            pt: "A liberdade total para os lobos é a morte para os cordeiros.",
+            en: "Total liberty for wolves is death to the lambs.",
+            zh: "狼的绝对自由就是羊的死亡。",
+            note: "<b>Lobos</b>: 狼。<b>Cordeiros</b>: 羊羔。"
+        },
+        {
+            author: "Robert Nozick",
+            pt: "Os indivíduos têm direitos e há coisas que ninguém pode fazer contra eles.",
+            en: "Individuals have rights and there are things no person may do to them.",
+            zh: "个人拥有权利，任何人不得对其侵犯。",
+            note: "<b>Ninguém</b>: 没有人。"
+        },
+        {
+            author: "Michel Foucault",
+            pt: "Onde há poder, há resistência.",
+            en: "Where there is power, there is resistance.",
+            zh: "哪里有权力，哪里就有反抗。",
+            note: "<b>Resistência</b>: 抵抗。"
+        },
+        {
+            author: "Jean-Paul Sartre",
+            pt: "O homem está condenado a ser livre.",
+            en: "Man is condemned to be free.",
+            zh: "人是被判定自由的。",
+            note: "<b>Condenado</b>: 被判处/被谴责。"
+        },
+        {
+            author: "Edmund Burke",
+            pt: "Aqueles que não conhecem a história estão fadados a repeti-la.",
+            en: "Those who don't know history are doomed to repeat it.",
+            zh: "不了解历史的人注定会重蹈覆辙。",
+            note: "<b>Fadados</b>: 注定的。<b>Repeti-la</b>: 重复它。"
+        },
+        {
+            author: "Cicero",
+            pt: "A liberdade consiste em ser escravo da lei.",
+            en: "Liberty consists in being a slave to the law.",
+            zh: "自由在于成为法律的奴隶。",
+            note: "<b>Escravo</b>: 奴隶。"
+        },
+        {
+            author: "Voltaire",
+            pt: "Posso não concordar com o que dizes, mas defenderei seu direito de dizê-lo.",
+            en: "I disapprove of what you say, but I will defend your right to say it.",
+            zh: "我不同意你说的话，但我誓死捍卫你说话的权利。",
+            note: "<b>Defenderei</b>: 动词 defender 的将来时。"
+        },
+        {
+            author: "Franklin D. Roosevelt",
+            pt: "A única coisa que devemos temer é o próprio medo.",
+            en: "The only thing we have to fear is fear itself.",
+            zh: "我们唯一需要恐惧的，是恐惧本身。",
+            note: "<b>Temer</b>: 恐惧。"
+        },
+        {
+            author: "Margaret Thatcher",
+            pt: "Não existe essa coisa de sociedade. Existem homens e mulheres individuais.",
+            en: "There is no such thing as society. There are individual men and women.",
+            zh: "没有社会这种东西，有的只是个体的人。",
+            note: "<b>Existe/Existem</b>: 存在（注意单复数变化）。"
+        },
+        {
+            author: "Confúcio",
+            pt: "Para colocar o mundo em ordem, devemos primeiro colocar a nação em ordem.",
+            en: "To put the world in order, we must first put the nation in order.",
+            zh: "欲治其国者，先齐其家；欲齐其家者，先修其身。",
+            note: "<b>Colocar</b>: 放置/使处于。<b>Ordem</b>: 秩序。"
+        },
+        {
+            author: "Sêneca",
+            pt: "Nenhum governo é seguro a menos que seja amado por aqueles que governa.",
+            en: "No government is safe unless it is loved by those it rules.",
+            zh: "任何政府如果不被人民爱戴，就不是安全的。",
+            note: "<b>A menos que</b>: 除非（后接虚拟式）。"
+        },
+        {
+            author: "David Hume",
+            pt: "A razão é, e deve ser, apenas a escrava das paixões.",
+            en: "Reason is, and ought only to be the slave of the passions.",
+            zh: "理性应当仅仅是情感的奴隶。",
+            note: "<b>Paixões</b>: 激情/情感。"
+        },
+        {
+            author: "Immanuel Kant",
+            pt: "A liberdade de cada um termina onde começa a liberdade do outro.",
+            en: "The freedom of each one ends where the freedom of another begins.",
+            zh: "一个人的自由以另一个人的自由开始为边界。",
+            note: "<b>Termina/Começa</b>: 结束与开始。"
+        },
+        {
+            author: "Lord Acton",
+            pt: "O poder tende a corromper, e o poder absoluto corrompe absolutamente.",
+            en: "Power tends to corrupt, and absolute power corrupts absolutely.",
+            zh: "权力导致腐败，绝对的权力导致绝对的腐败。",
+            note: "<b>Tende a</b>: 倾向于。"
+        },
+        {
+            author: "Bertrand Russell",
+            pt: "O problema do mundo é que os tolos têm certeza e os inteligentes têm dúvidas.",
+            en: "The trouble with the world is that the stupid are cocksure and the intelligent are full of doubt.",
+            zh: "这个世界的麻烦在于，愚蠢者信心满满，而聪明人满腹疑虑。",
+            note: "<b>Tolos</b>: 愚蠢的人。<b>Certeza/Dúvidas</b>: 确定与怀疑。"
+        },
+        {
+            author: "Albert Camus",
+            pt: "A única maneira de lidar com um mundo sem liberdade é tornar-se tão livre que sua existência seja um ato de rebelião.",
+            en: "The only way to deal with an unfree world is to become so free that your existence is an act of rebellion.",
+            zh: "应对无自由世界的唯一方式，是让自己变得如此自由，以至于你的存在本身就是反抗。",
+            note: "<b>Lidar com</b>: 处理/应对。"
+        },
+        {
+            author: "Noam Chomsky",
+            pt: "Se não acreditamos na liberdade de expressão para aqueles que desprezamos, não acreditamos nela.",
+            en: "If we don't believe in freedom of expression for people we despise, we don't believe in it at all.",
+            zh: "如果我们不相信我们所鄙视的人也有言论自由，那我们根本就不相信自由。",
+            note: "<b>Desprezamos</b>: 蔑视/鄙视。"
+        },
+        {
+            author: "Simone de Beauvoir",
+            pt: "Ninguém nasce mulher: torna-se mulher.",
+            en: "One is not born a woman, but becomes one.",
+            zh: "女人不是天生成的，而是后天变成的。",
+            note: "<b>Torna-se</b>: 变成/成为。"
+        },
+        {
+            author: "Henry David Thoreau",
+            pt: "O melhor governo é o que governa menos.",
+            en: "That government is best which governs least.",
+            zh: "管得最少的政府是最好的政府。",
+            note: "<b>Menos</b>: 最少。"
+        },
+        {
+            author: "Sun Tzu",
+            pt: "A suprema arte da guerra é derrotar o inimigo sem lutar.",
+            en: "The supreme art of war is to subdue the enemy without fighting.",
+            zh: "不战而屈人之兵，善之善者也。",
+            note: "<b>Derrotar</b>: 击败。<b>Lutar</b>: 战斗。"
+        },
+        // 51-80 新增加的 30 句名言 (更长、更深入的句子)
+        {
+            author: "Aristóteles",
+            pt: "A base de um estado democrático é a liberdade, pois as pessoas dizem que apenas nessa constituição os homens compartilham a liberdade.",
+            en: "The basis of a democratic state is liberty; which, according to the common opinion of men, can only be enjoyed in such a state.",
+            zh: "民主国家的基石是自由，因为人们普遍认为，只有在这样的政体中，人们才能分享自由。",
+            note: "<b>A base</b>: 基础。<b>Compartilham</b>: 动词 compartilhar (分享)。"
+        },
+        {
+            author: "Abraham Lincoln",
+            pt: "Quase todos os homens podem suportar a adversidade, mas se você quiser testar o caráter de um homem, dê-lhe poder.",
+            en: "Nearly all men can stand adversity, but if you want to test a man's character, give him power.",
+            zh: "几乎所有人都能忍受逆境，但如果你想考验一个人的品格，就给他权力。",
+            note: "<b>Suportar</b>: 忍受/承受。<b>Dê-lhe</b>: 动词 dar(给) + lhe(他)，意为“给他”。"
+        },
+        {
+            author: "Marco Aurélio",
+            pt: "A melhor vingança é não ser como o seu inimigo.",
+            en: "The best revenge is to be unlike him who performed the injury.",
+            zh: "最好的报复，就是不要变成像你的敌人那样的人。",
+            note: "<b>Vingança</b>: 报复/复仇。<b>Inimigo</b>: 敌人。"
+        },
+        {
+            author: "Nicolau Maquiavel",
+            pt: "Não há outro meio de se guardar contra a adulação a não ser fazendo com que os homens entendam que não te ofendem dizendo a verdade.",
+            en: "There is no other way to guard yourself against flattery than by making men understand that telling you the truth will not offend you.",
+            zh: "防范阿谀奉承的唯一方法，就是让人们明白，对你说真话并不会冒犯你。",
+            note: "<b>Adulação</b>: 阿谀奉承。<b>Ofendem</b>: 冒犯/得罪。"
+        },
+        {
+            author: "Péricles",
+            pt: "Apenas porque você não se interessa pela política, não significa que a política não se interessará por você.",
+            en: "Just because you do not take an interest in politics doesn't mean politics won't take an interest in you.",
+            zh: "仅仅因为你不关心政治，并不意味着政治就不会来关心你。",
+            note: "<b>Interessa por</b>: 对...感兴趣。在巴西葡语中很常用的搭配。"
+        },
+        {
+            author: "Alexis de Tocqueville",
+            pt: "A saúde de uma sociedade democrática pode ser medida pela qualidade das funções desempenhadas por seus cidadãos privados.",
+            en: "The health of a democratic society may be measured by the quality of functions performed by private citizens.",
+            zh: "一个民主社会的健康程度，可以通过其普通公民履行职责的质量来衡量。",
+            note: "<b>Saúde</b>: 健康。<b>Desempenhadas</b>: 履行的/执行的（过去分词）。"
+        },
+        {
+            author: "George Washington",
+            pt: "O governo não é razão, não é eloquência; é força. Como o fogo, é um servo perigoso e um mestre temível.",
+            en: "Government is not reason, it is not eloquence, it is force; like fire, a troublesome servant and a fearful master.",
+            zh: "政府不是理性，不是雄辩，而是暴力。它就像火一样，是一个危险的仆人，也是一个可怕的主人。",
+            note: "<b>Fogo</b>: 火。<b>Temível</b>: 可怕的/令人敬畏的。"
+        },
+        {
+            author: "John F. Kennedy",
+            pt: "Não pergunte o que seu país pode fazer por você, pergunte o que você pode fazer por seu país.",
+            en: "Ask not what your country can do for you – ask what you can do for your country.",
+            zh: "不要问你的国家能为你做什么，问问你能为你的国家做什么。",
+            note: "<b>Pergunte</b>: 动词 perguntar(问) 的命令式。<b>País</b>: 国家。"
+        },
+        {
+            author: "Nelson Mandela",
+            pt: "Ninguém nasce odiando outra pessoa pela cor de sua pele. Para odiar, as pessoas precisam aprender.",
+            en: "No one is born hating another person because of the color of his skin. People must learn to hate.",
+            zh: "没有人生来就会因为肤色而仇恨他人。要学会仇恨，人们必须经过学习。",
+            note: "<b>Odiando</b>: 仇恨 (副动词/现在分词)。<b>Pele</b>: 皮肤。"
+        },
+        {
+            author: "Martin Luther King Jr.",
+            pt: "A verdadeira medida de um homem não se vê nos momentos de conforto e conveniência, mas sim naqueles de desafio e controvérsia.",
+            en: "The ultimate measure of a man is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.",
+            zh: "衡量一个人的最终标准，不是看他在舒适和顺境时的立场，而是看他在面临挑战和争议时的表现。",
+            note: "<b>Verdadeira</b>: 真正的。<b>Desafio</b>: 挑战。"
+        },
+        {
+            author: "Simone Weil",
+            pt: "Estar enraizado é talvez a necessidade mais importante e menos reconhecida da alma humana.",
+            en: "To be rooted is perhaps the most important and least recognized need of the human soul.",
+            zh: "扎根或许是人类灵魂最重要却又最不被认可的需求。",
+            note: "<b>Enraizado</b>: 扎根的。<b>Alma</b>: 灵魂。"
+        },
+        {
+            author: "Baruch Spinoza",
+            pt: "O fim último do Estado não é dominar os homens pelo medo, mas libertar cada um do medo para que possa viver e agir com segurança.",
+            en: "The ultimate aim of government is not to rule by fear, but to free every man from fear that he may live in security.",
+            zh: "国家的最终目的不是用恐惧来统治人们，而是把每一个人从恐惧中解放出来，使其能安全地生活和行动。",
+            note: "<b>Medo</b>: 害怕/恐惧。<b>Agir</b>: 行动。"
+        },
+        {
+            author: "Immanuel Kant",
+            pt: "Aja apenas segundo aquela máxima pela qual você possa, ao mesmo tempo, querer que ela se torne uma lei universal.",
+            en: "Act only according to that maxim whereby you can, at the same time, will that it should become a universal law.",
+            zh: "你的行动，必须符合你同时希望它能成为一项普遍法则的准则。",
+            note: "<b>Aja</b>: 动词 agir(行动) 的命令式。<b>Lei universal</b>: 普遍法则。"
+        },
+        {
+            author: "Thomas Jefferson",
+            pt: "Quando os governos temem o povo, há liberdade. Quando o povo teme o governo, há tirania.",
+            en: "When government fears the people, there is liberty. When the people fear the government, there is tyranny.",
+            zh: "当政府害怕人民时，就有自由。当人民害怕政府时，就有暴政。",
+            note: "<b>Temem/Teme</b>: 动词 temer(害怕)。注意单复数的变位。<b>Tirania</b>: 暴政。"
+        },
+        {
+            author: "Hannah Arendt",
+            pt: "O súdito ideal do regime totalitário não é aquele que acredita na ideologia, mas aquele para quem já não existe a diferença entre o fato e a ficção.",
+            en: "The ideal subject of totalitarian rule is not the convinced believer, but people for whom the distinction between fact and fiction no longer exist.",
+            zh: "极权主义统治的理想臣民并不是深信不疑的信徒，而是那些对事实与虚构之间的区别不再有感知的人。",
+            note: "<b>Súdito</b>: 臣民。<b>Ficção</b>: 虚构/小说。"
+        },
+        {
+            author: "Albert Einstein",
+            pt: "O mundo é um lugar perigoso de se viver, não por causa daqueles que fazem o mal, mas por causa daqueles que observam e deixam o mal acontecer.",
+            en: "The world is a dangerous place to live, not because of the people who are evil, but because of the people who don't do anything about it.",
+            zh: "世界是一个危险的地方，并非因为那些作恶的人，而是因为那些袖手旁观、任由罪恶发生的人。",
+            note: "<b>Fazem o mal</b>: 作恶。<b>Acontecer</b>: 发生。"
+        },
+        {
+            author: "Rosa Luxemburgo",
+            pt: "A liberdade é sempre e exclusivamente a liberdade para aquele que pensa de modo diferente.",
+            en: "Freedom is always and exclusively freedom for the one who thinks differently.",
+            zh: "自由永远且仅仅是属于那些具有不同思想的人的自由。",
+            note: "<b>Exclusivamente</b>: 仅仅/排他地。<b>Diferente</b>: 不同的。"
+        },
+        {
+            author: "Vaclav Havel",
+            pt: "A esperança não é a convicção de que algo vai dar certo, mas a certeza de que algo faz sentido, independentemente de como termine.",
+            en: "Hope is not the conviction that something will turn out well, but the certainty that something makes sense, regardless of how it turns out.",
+            zh: "希望并不是确信某事会顺利发展，而是笃信某事是有意义的，无论结局如何。",
+            note: "<b>Dar certo</b>: 巴西常用语，意为“成功/顺利”。<b>Termine</b>: 动词 terminar 的虚拟式。"
+        },
+        {
+            author: "Karl Marx",
+            pt: "Os homens fazem a sua própria história, mas não a fazem como querem; não a fazem sob circunstâncias de sua escolha.",
+            en: "Men make their own history, but they do not make it as they please; they do not make it under self-selected circumstances.",
+            zh: "人们自己创造自己的历史，但他们并不是随心所欲地创造，并不是在他们自己选定的条件下创造。",
+            note: "<b>Própria</b>: 自己的。<b>Escolha</b>: 选择 (名词)。"
+        },
+        {
+            author: "John Stuart Mill",
+            pt: "A peculiaridade do mal de silenciar a expressão de uma opinião é que se trata de um roubo à raça humana; à posteridade tanto quanto à geração atual.",
+            en: "The peculiar evil of silencing the expression of an opinion is, that it is robbing the human race; posterity as well as the existing generation.",
+            zh: "压制意见表达的特殊罪恶在于，这是对整个人类的抢劫；是对后代以及当代人的剥夺。",
+            note: "<b>Silenciar</b>: 沉默/压制声音。<b>Roubo</b>: 抢劫/偷窃。"
+        },
+        {
+            author: "Eleanor Roosevelt",
+            pt: "Ninguém pode fazer você se sentir inferior sem o seu consentimento.",
+            en: "No one can make you feel inferior without your consent.",
+            zh: "未经你的同意，没有人能让你感到自卑。",
+            note: "<b>Sentir inferior</b>: 感到自卑/低人一等。<b>Consentimento</b>: 同意/许可。"
+        },
+        {
+            author: "Cícero",
+            pt: "A segurança do povo deve ser a lei suprema e a base fundamental de qualquer república que pretenda ser justa e duradoura.",
+            en: "The safety of the people shall be the highest law and the fundamental basis of any republic that intends to be just and lasting.",
+            zh: "人民的安全应是最高法律，也是任何企图建立公正持久共和国的根本基石。",
+            note: "<b>Suprema</b>: 最高的。<b>Duradoura</b>: 持久的。"
+        },
+        {
+            author: "Jean-Jacques Rousseau",
+            pt: "O primeiro homem que, tendo cercado um pedaço de terra, pensou em dizer 'Isto é meu', foi o verdadeiro fundador da sociedade civil.",
+            en: "The first man who, having enclosed a piece of ground, bethought himself of saying 'This is mine', was the real founder of civil society.",
+            zh: "第一个把一块土地圈起来，并心想“这是我的”的人，就是公民社会的真正奠基者。",
+            note: "<b>Pedaço de terra</b>: 一块土地。<b>Meu</b>: 我的。"
+        },
+        {
+            author: "John Locke",
+            pt: "Sendo todos os homens, por natureza, livres, iguais e independentes, ninguém pode ser submetido ao poder político de outro sem o seu próprio consentimento.",
+            en: "Men being, as has been said, by nature, all free, equal and independent, no one can be subjected to the political power of another, without his own consent.",
+            zh: "既然所有人天生都是自由、平等和独立的，未经其本人同意，任何人都不能被置于他人的政治权力之下。",
+            note: "<b>Sendo</b>: 动词 ser 的副动词形式，表原因“既然是...”。"
+        },
+        {
+            author: "Arthur Schopenhauer",
+            pt: "Toda a verdade passa por três estágios. Primeiro, é ridicularizada. Segundo, é violentamente oposta. Terceiro, é aceita como sendo autoevidente.",
+            en: "All truth passes through three stages. First, it is ridiculed. Second, it is violently opposed. Third, it is accepted as being self-evident.",
+            zh: "所有的真理都要经历三个阶段。首先，受到嘲笑。其次，遭到强烈反对。第三，被接受为不言而喻的常理。",
+            note: "<b>Estágios</b>: 阶段。<b>Autoevidente</b>: 不言而喻的/显而易见的。"
+        },
+        {
+            author: "Confúcio",
+            pt: "Quando a bondade e a justiça governam o estado, o povo confia nos líderes. Quando as leis punitivas se multiplicam, o povo torna-se evasivo.",
+            en: "When goodness and justice govern the state, the people trust their leaders. When punitive laws multiply, the people become evasive.",
+            zh: "道之以政，齐之以刑，民免而无耻；道之以德，齐之以礼，有耻且格。(如果用刑罚来治国，百姓就会变得狡诈逃避。)",
+            note: "<b>Bondade</b>: 善良。<b>Torna-se</b>: 变成。"
+        },
+        {
+            author: "Winston Churchill",
+            pt: "O sucesso não é o final, o fracasso não é fatal: é a coragem para continuar que realmente conta e faz a diferença.",
+            en: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+            zh: "成功不是终点，失败也非致命：重要的是继续前进的勇气。",
+            note: "<b>Fracasso</b>: 失败。<b>Coragem</b>: 勇气。"
+        },
+        {
+            author: "Antonio Gramsci",
+            pt: "O velho mundo está morrendo, e o novo mundo luta para nascer: agora é o tempo dos monstros.",
+            en: "The old world is dying, and the new world struggles to be born: now is the time of monsters.",
+            zh: "旧世界正在死去，新世界正挣扎着诞生：现在是群魔乱舞的时代。",
+            note: "<b>Morrendo/Nascer</b>: 死亡与出生。<b>Monstros</b>: 怪物。"
+        },
+        {
+            author: "José Saramago",
+            pt: "Acho que na sociedade atual nos falta filosofia. Filosofia como espaço, lugar, método de reflexão, que pode não ter um objetivo concreto.",
+            en: "I think that in current society we lack philosophy. Philosophy as space, place, method of reflection, which may not have a concrete objective.",
+            zh: "我认为在当今社会我们缺乏哲学。哲学作为一种空间、地点和反思的方法，它可能并没有一个具体的目标。",
+            note: "<b>Falta</b>: 缺少/缺乏。<b>Concreto</b>: 具体的。萨拉马戈是著名的葡语作家。"
+        },
+        {
+            author: "Paulo Freire",
+            pt: "Lavar as mãos no conflito entre os poderosos e os impotentes significa ficar do lado dos poderosos, não ser neutro.",
+            en: "Washing one's hands of the conflict between the powerful and the powerless means to side with the powerful, not to be neutral.",
+            zh: "在权贵与弱者之间的冲突中洗手不干（袖手旁观），意味着站在权贵的一边，而不是保持中立。",
+            note: "Paulo Freire foi um educador de Recife (Pernambuco!). <b>Lavar as mãos</b>: 洗手，引申为“推卸责任/袖手旁观”。<b>Ficar do lado</b>: 站在...一边。"
+        }
+    ];
+
+    let currentIndex = 0;
+
+    function render() {
+        const item = quotes[currentIndex];
+        const container = document.getElementById('content-area');
+        
+        // 动画重置
+        const content = container.querySelector('.fade-in');
+        content.style.animation = 'none';
+        content.offsetHeight; // trigger reflow
+        content.style.animation = null;
+
+        document.getElementById('author').innerText = item.author;
+        document.getElementById('quote-pt').innerText = item.pt;
+        document.getElementById('quote-en').innerText = item.en;
+        document.getElementById('quote-zh').innerText = item.zh;
+        document.getElementById('note').innerHTML = item.note;
+        
+        // 动态显示当前序号 / 总长度
+        document.getElementById('counter').innerText = `${String(currentIndex + 1).padStart(2, '0')} / ${quotes.length}`;
+        
+        // 更新进度条
+        const progress = ((currentIndex + 1) / quotes.length) * 100;
+        document.getElementById('progress').style.width = `${progress}%`;
+        
+        // 更新收藏星星状态
+        updateStarUI();
+    }
+
+    function next() {
+        currentIndex = (currentIndex + 1) % quotes.length;
+        render();
+    }
+
+    function prev() {
+        currentIndex = (currentIndex - 1 + quotes.length) % quotes.length;
+        render();
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') next();
+        if (e.key === 'ArrowLeft') prev();
+    });
+
+    // 收藏功能状态管理
+    let favorites = JSON.parse(localStorage.getItem('political_quotes_fav')) || [];
+
+    function toggleFavorite() {
+        const currentQuotePt = quotes[currentIndex].pt;
+        const index = favorites.indexOf(currentQuotePt);
+        
+        if (index === -1) {
+            favorites.push(currentQuotePt); // Adicionar aos favoritos (加入收藏)
+        } else {
+            favorites.splice(index, 1); // Remover dos favoritos (取消收藏)
+        }
+        
+        localStorage.setItem('political_quotes_fav', JSON.stringify(favorites));
+        updateStarUI();
+    }
+
+    function updateStarUI() {
+        const currentQuotePt = quotes[currentIndex].pt;
+        const starIcon = document.getElementById('star-icon');
+        
+        if (favorites.includes(currentQuotePt)) {
+            starIcon.setAttribute('fill', 'currentColor');
+            starIcon.classList.add('text-yellow-400');
+            starIcon.classList.remove('text-slate-300');
+        } else {
+            starIcon.setAttribute('fill', 'none');
+            starIcon.classList.remove('text-yellow-400');
+            starIcon.classList.add('text-slate-300');
+        }
+    }
+
+    // 乱序功能 (Ordem Aleatória)
+    function shuffleQuotes() {
+        // 使用 Fisher-Yates 洗牌算法打乱数组
+        for (let i = quotes.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [quotes[i], quotes[j]] = [quotes[j], quotes[i]];
+        }
+        currentIndex = 0; // 重置回第一句
+        render();
+    }
+
+    window.onload = render;
+</script>
+</body>
+</html>
